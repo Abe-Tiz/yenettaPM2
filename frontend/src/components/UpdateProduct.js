@@ -14,9 +14,9 @@ const UpdateProduct = () => {
   //display all products when page is loading
   useEffect(() => {
     try {
-      axios.get("http://localhost:4000/")
+      axios.get("http://localhost:4000/" )
         .then((res) => {
-          const product = res.data.find((product) => product.ID === id);
+          const product = res.data.find((product) => product.ID == id);
           setName(product.name);
           setDescription(product.description);
           setPrice(product.price);
@@ -78,7 +78,7 @@ const UpdateProduct = () => {
               class="form-control"
               value={description}
               id="form4Example3"
-              rows="4"
+              rows="2"
               required
               placeholder="description here..."
               onChange={(e) => setDescription(e.target.value)}
@@ -123,7 +123,7 @@ const UpdateProduct = () => {
           </div>
           <button
             type="submit"
-            className="btn btn-primary"
+            className="btn btn-primary w-50"
           >
             Update
           </button>

@@ -109,11 +109,11 @@ const ProductList = () => {
         getUnAvailableProducts={getUnAvailableProducts}
         handleAllProducts={handleAllProducts}
       />
-      <div className="container w-75 bg-white rounded p-3 ">
+      <div className="container w-75  rounded p-3 ">
         <h2> {title}</h2>
-        <table className="table table-hover table-bordered  table-striped ">
+        <table className=" table table-hover  ">
           <thead class="thead-dark">
-            <tr>
+            <tr class="table-primary">
               <th>Product Name</th>
               <th>Description</th>
               <th>Price</th>

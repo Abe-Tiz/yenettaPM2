@@ -7,10 +7,10 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 import ProductList from "./components/ProductList";
 import ProductForm from './components/ProductForm';
 import UpdateProduct from "./components/UpdateProduct";
-
+ 
 function App() {
   return (
-    <div className="App">
+    <div className="container_product">
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<ProductList />} />

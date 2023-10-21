@@ -21,7 +21,7 @@ const NavBar = ({
   return (
     <div className="nav ">
       <div>
-        <button to="/">LOGO</button>
+        <button to="/">Abebe</button>
       </div>
       <div>
         <button onClick={handleAllProducts}>Home</button>

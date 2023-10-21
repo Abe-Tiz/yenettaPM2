@@ -20,11 +20,11 @@ const Product = ({
 
   return (
     <>
-      <tr key={product.ID}>
-        <td>{product.name}</td>
-        <td>{product.description}</td>
-        <td>{product.price} br</td>
-        <td>
+      <tr class="table-primary" key={product.ID}>
+        <td >{product.name}</td>
+        <td >{product.description}</td>
+        <td >{product.price} br</td>
+        <td >
           <label>
             <input
               type="checkbox"
@@ -33,17 +33,12 @@ const Product = ({
                 handleAvailabilityChanges(product.ID, product.available)
               }
             />
-              {
-                product.available ? "In Stock" : "Out Of Stock"
-              }
+            {product.available ? "In Stock" : "Out Of Stock"}
           </label>
         </td>
-        <td>
-          <div className='btn-action'>
-            <Link 
-              to={`/updateProduct/${product.ID}`} 
-              class="btn btn-primary"
-            >
+        <td >
+          <div className="btn-action">
+            <Link to={`/updateProduct/${product.ID}`} class="btn btn-primary">
               Update
             </Link>
             <button
