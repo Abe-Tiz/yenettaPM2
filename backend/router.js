@@ -38,14 +38,14 @@ app.get("/unavailableProducts", (req, res) => {
 });
 
 //rout for display available products
-app.get("/availableProducts", (req, res) => {
-  const sql = "SELECT * from product WHERE available = true";
+// app.get("/availableProducts", (req, res) => {
+//   const sql = "SELECT * from product WHERE available = true";
 
-  db.query(sql, (err, data) => {
-    if (err) return res.json(err);
-    return res.json(data);
-  });
-});
+//   db.query(sql, (err, data) => {
+//     if (err) return res.json(err);
+//     return res.json(data);
+//   });
+// });
 
 //rout for update availablity
 app.put("/updateProductAvailability/:productId", (req, res) => {
