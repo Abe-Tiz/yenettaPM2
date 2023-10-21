@@ -19,7 +19,7 @@ const ProductList = () => {
         axios.get("http://localhost:4000/")
       .then((res) => {
         setProducts(res.data);
-        setTitle("List Of All Products");
+        setTitle("List Of All Products in stock are the following");
       })
     } catch (error) {
       console.error(error);
@@ -33,7 +33,7 @@ const ProductList = () => {
         axios.get("http://localhost:4000/")
       .then((res) => {
         setProducts(res.data);
-        setTitle("List Of All Products");
+        setTitle("List Of All Products in stock are the following");
       })
     } catch (error) {
       console.error(error);
@@ -46,7 +46,7 @@ const ProductList = () => {
       axios.get("http://localhost:4000/availableProducts").then((res) => {
         console.log(res);
         setProducts(res.data);
-        setTitle("List Of Available Products");
+        setTitle("List Of Available Products in stock are the following");
       });
     } catch (error) {
       console.error(error);
@@ -60,7 +60,7 @@ const ProductList = () => {
         axios.get("http://localhost:4000/unavailableProducts").then((res) => {
           console.log(res);
           setProducts(res.data);
-          setTitle("List Of Un Available Products");
+          setTitle("List Of Un Available Products in stock are the following");
         });
     } catch (error) {
       console.error(error);

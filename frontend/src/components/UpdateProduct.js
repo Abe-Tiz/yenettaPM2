@@ -7,7 +7,7 @@ const UpdateProduct = () => {
   const [description, setDescription] = useState("");
   const [price, setPrice] = useState("");
   const [quantity, setQuantity] = useState("");
-  
+
   const navigate = useNavigate();
   const { id } = useParams();
 
@@ -30,8 +30,7 @@ const UpdateProduct = () => {
   const handleSubmit = (e) => {
     try {
       e.preventDefault();
-      axios
-      .put("http://localhost:4000/updateProduct/" + id, {
+      axios.put("http://localhost:4000/updateProduct/" + id, {
         name,
         description,
         price,
@@ -56,7 +55,7 @@ const UpdateProduct = () => {
   return (
     <div className="d-flex vh-100 bg-primary justify-content-center align-items-center">
       <div className="w-50 bg-white rounded p-3">
-        <h2>Add Products</h2>
+        <h2>Update Products</h2>
         <form onSubmit={handleSubmit}>
           <div className="mb-2">
             <label for="name"> Product Name : </label>
@@ -126,7 +125,7 @@ const UpdateProduct = () => {
             type="submit"
             className="btn btn-primary"
           >
-            Submit
+            Update
           </button>
         </form>
       </div>
