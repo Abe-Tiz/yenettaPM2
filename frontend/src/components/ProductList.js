@@ -8,6 +8,7 @@ import Footer from "./footer/Footer";
 
 const ProductList = () => {
   const [products, setProducts] = useState([]);
+  const [title, setTitle] = useState('');
 
   //navigate hooks
   const navigate = useNavigate();
@@ -18,6 +19,7 @@ const ProductList = () => {
         axios.get("http://localhost:4000/")
       .then((res) => {
         setProducts(res.data);
+        setTitle("List Of All Products");
       })
     } catch (error) {
       console.error(error);
@@ -31,6 +33,7 @@ const ProductList = () => {
         axios.get("http://localhost:4000/")
       .then((res) => {
         setProducts(res.data);
+        setTitle("List Of All Products");
       })
     } catch (error) {
       console.error(error);
@@ -43,6 +46,7 @@ const ProductList = () => {
       axios.get("http://localhost:4000/availableProducts").then((res) => {
         console.log(res);
         setProducts(res.data);
+        setTitle("List Of Available Products");
       });
     } catch (error) {
       console.error(error);
@@ -56,6 +60,7 @@ const ProductList = () => {
         axios.get("http://localhost:4000/unavailableProducts").then((res) => {
           console.log(res);
           setProducts(res.data);
+          setTitle("List Of Un Available Products");
         });
     } catch (error) {
       console.error(error);
@@ -105,7 +110,7 @@ const ProductList = () => {
         handleAllProducts={handleAllProducts}
       />
       <div className="container w-75 bg-white rounded p-3 ">
-        <h1> My Products List</h1>
+        <h2> {title}</h2>
         <table className="table table-hover table-bordered  table-striped ">
           <thead class="thead-dark">
             <tr>
