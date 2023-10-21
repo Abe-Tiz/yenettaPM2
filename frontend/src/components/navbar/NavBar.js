@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "./navbar.css";
-
+ 
 const NavBar = ({
   getUnAvailableProducts,
   handleAllProducts,
@@ -21,7 +21,7 @@ const NavBar = ({
   return (
     <div className="nav ">
       <div>
-        <button to="/">Abebe</button>
+         <button to="/">Abebe</button>
       </div>
       <div>
         <button onClick={handleAllProducts}>Home</button>

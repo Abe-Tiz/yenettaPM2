@@ -19,7 +19,7 @@ app.get("/", (req, res) => {
 
  
 
-//rout for display all products
+//route for display available products
 app.get("/availableProducts", (req, res) => {
   const sql = "SELECT * from product WHERE available = true";
 

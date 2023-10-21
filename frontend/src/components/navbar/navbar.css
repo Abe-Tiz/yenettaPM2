@@ -19,7 +19,18 @@ button{
     color:#FCFEFE
 }
 
+button:hover{
+    border-bottom: 2px solid  #B0578D;
+    transition : all 0.5s;
+   
+}
+ 
+
 .link{
     text-decoration:none;
     color: #FCFEFE;
+}
+
+.link:hover{
+    transition : all 0.5s;
 }
