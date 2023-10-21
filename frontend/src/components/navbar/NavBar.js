@@ -7,10 +7,13 @@ const NavBar = ({
   handleAllProducts,
   handlAvailableProduct,
 }) => {
+
+  //handle unavailable products
   const handleUnAvailableProducts = () => {
     getUnAvailableProducts();
   };
 
+  //get available products
   const handlAvailableProducts = () => {
     handlAvailableProduct();
   };

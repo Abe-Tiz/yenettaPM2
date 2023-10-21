@@ -7,9 +7,9 @@
     padding:10px;
     box-shadow: 0 4px 4px gray;
     position:fixed;
-   z-index:999;
-   width:100%;
-   margin-bottom:4rem;
+    z-index:999;
+    width:100%;
+    margin-bottom:4rem;
 }
 
 button{

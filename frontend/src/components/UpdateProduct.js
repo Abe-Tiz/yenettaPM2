@@ -7,29 +7,30 @@ const UpdateProduct = () => {
   const [description, setDescription] = useState("");
   const [price, setPrice] = useState("");
   const [quantity, setQuantity] = useState("");
-  // const [products, setProducts] = useState([]);
-
+  
   const navigate = useNavigate();
   const { id } = useParams();
 
   //display all products when page is loading
   useEffect(() => {
-    axios
-      .get("http://localhost:4000/")
-      .then((res) => {
-        const product = res.data.find((product) => product.ID === id);
-        setName(product.name);
-        setDescription(product.description);
-        setPrice(product.price);
-        setQuantity(product.quantity);
-      })
-      .catch((err) => console.error(err));
+    try {
+      axios.get("http://localhost:4000/")
+        .then((res) => {
+          const product = res.data.find((product) => product.ID === id);
+          setName(product.name);
+          setDescription(product.description);
+          setPrice(product.price);
+          setQuantity(product.quantity);
+        })
+      } catch (error) {
+      console.error(error);
+    }
   });
 
   const handleSubmit = (e) => {
-    e.preventDefault();
-
-    axios
+    try {
+      e.preventDefault();
+      axios
       .put("http://localhost:4000/updateProduct/" + id, {
         name,
         description,
@@ -40,7 +41,9 @@ const UpdateProduct = () => {
         navigate("/");
         console.log(res);
       })
-      .catch((err) => console.error(err));
+    } catch (error) {
+      console.error(error);
+    }
   };
 
   const handleKeyPress = (event) => {
@@ -100,7 +103,10 @@ const UpdateProduct = () => {
             />
           </div>
           <div className="mb-2">
-            <label class="form-label" for="form4Example3">
+            <label
+              class="form-label"
+              for="form4Example3"
+            >
               Enter quantity :
             </label>
             <input
@@ -116,7 +122,10 @@ const UpdateProduct = () => {
               required
             />
           </div>
-          <button type="submit" className="btn btn-primary">
+          <button
+            type="submit"
+            className="btn btn-primary"
+          >
             Submit
           </button>
         </form>

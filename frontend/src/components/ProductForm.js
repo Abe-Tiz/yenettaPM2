@@ -10,31 +10,35 @@ const ProductForm = () => {
 
   const navigate = useNavigate();
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
 
-    axios
-      .post("http://localhost:4000/addProduct", {
+  //handle submit
+  const handleSubmit = (e) => {
+    try {
+        e.preventDefault();
+    axios.post("http://localhost:4000/addProduct", {
         name,
         description,
         price,
         quantity,
-        // available,
       })
       .then((res) => {
         navigate("/");
         console.log(res);
-        // setAvailable(true);
       })
-      .catch((err) => console.error(err));
+    } catch (error) {
+      console.error(error);
+    }
+    
   };
 
+  //handle key press 
   const handleKeyPress = (event) => {
     const charCode = event.which || event.keyCode;
     if ((charCode > 31 && charCode < 48) || charCode > 57) {
       event.preventDefault();
     }
   };
+  
 
   return (
     <div className="d-flex vh-100 bg-primary justify-content-center align-items-center">
