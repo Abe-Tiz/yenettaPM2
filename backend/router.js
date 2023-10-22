@@ -87,13 +87,12 @@ app.put("/updateProductAvailability/:productId", (req, res) => {
 
 //update products
 app.put("/updateProduct/:id", (req, res) => {
-    const sql =
-        "update product set `name` = ?,  `description` = ? ,`price` = ? , `quantity` = ?  where ID = ?";
+    const sql ="UPDATE product set `name` = ?,  `description` = ? ,`price` = ? , `quantity` = ?  where ID = ?";
     const values = [
         req.body.name,
         req.body.description,
         req.body.price,
-        req.body.quantity,
+        req.body.quantity
     ];
     const id = req.params.id;
 

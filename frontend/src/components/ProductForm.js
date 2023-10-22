@@ -41,7 +41,7 @@ const ProductForm = () => {
   
 
   return (
-    <div className="d-flex vh-100 bg-primary justify-content-center align-items-center">
+    <div className="product__add d-flex vh-100 justify-content-center align-items-center">
       <div className="w-50 bg-white rounded p-3">
         <h2>Add Products</h2>
         <form className="profduct__form" onSubmit={handleSubmit}>

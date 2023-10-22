@@ -96,6 +96,7 @@ const ProductList = () => {
       await axios.delete("http://localhost:4000/delete/" + productId)
         .thene((res) => {
           console.log(res);
+          window.location.reload(); // Refresh the page
         });
     } catch (error) {
       console.error(error);
