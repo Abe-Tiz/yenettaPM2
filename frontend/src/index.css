@@ -27,6 +27,8 @@ code {
 .product__add{
   background-color:#89CFF3;
 }
-
  
+html{
+  scroll-behavior: smooth;
+}
  
