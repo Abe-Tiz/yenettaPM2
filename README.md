@@ -18,7 +18,7 @@ Before getting started, ensure you have the following installed:
  Replace `your_mysql_username` and `your_mysql_password` with your MySQL credentials.
 
 5. Import the `productInventory.sql` file located in the `backend` directory into your MySQL database to create the necessary tables and sample data.
-6. Start the backend server: `node route.js`.
+6. Start the backend server: `node router.js`.
 7. The backend server will be running at `http://localhost:4000`.
 
 ## Frontend Setup
