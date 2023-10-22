@@ -15,7 +15,7 @@ const ProductForm = () => {
   const handleSubmit = (e) => {
     try {
         e.preventDefault();
-    axios.post("http://localhost:4000/addProduct", {
+      axios.post("http://localhost:4000/addProduct", {
         name,
         description,
         price,
@@ -102,7 +102,10 @@ const ProductForm = () => {
               required
             />
           </div>
-          <button type="submit" className="btn btn-primary w-50 m-20">
+          <button 
+            type="submit" 
+            className="btn btn-primary w-50 m-20"
+          >
             Submit
           </button>
         </form>

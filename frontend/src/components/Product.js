@@ -33,12 +33,17 @@ const Product = ({
                 handleAvailabilityChanges(product.ID, product.available)
               }
             />
-            {product.available ? "In Stock" : "Out Of Stock"}
+              {
+                product.available ? "In Stock" : "Out Of Stock"
+              }
           </label>
         </td>
         <td >
           <div className="btn-action">
-            <Link to={`/updateProduct/${product.ID}`}  class="btn btn-primary">
+            <Link 
+              to={`/updateProduct/${product.ID}`} 
+              class="btn btn-primary"
+            >
               Update
             </Link>
             <button

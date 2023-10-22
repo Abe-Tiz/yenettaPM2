@@ -11,6 +11,7 @@ const UpdateProduct = () => {
   const navigate = useNavigate();
   const { id } = useParams();
 
+  // handle submit data 
   const handleSubmit = (e) => {
     try {
       e.preventDefault();

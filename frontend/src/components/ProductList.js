@@ -16,10 +16,10 @@ const ProductList = () => {
   //display all products when page is loading
   useEffect(() => {
     try {
-        axios.get("http://localhost:4000/")
-      .then((res) => {
-        setProducts(res.data);
-        setTitle("List Of All Products in stock are the following");
+      axios.get("http://localhost:4000/")
+        .then((res) => {
+          setProducts(res.data);
+          setTitle("List Of All Products in stock are the following");
       })
     } catch (error) {
       console.error(error);
@@ -30,10 +30,10 @@ const ProductList = () => {
   //get all products
   const handleAllProducts = () => {
     try {
-        axios.get("http://localhost:4000/")
-      .then((res) => {
-        setProducts(res.data);
-        setTitle("List Of All Products in stock are the following");
+      axios.get("http://localhost:4000/")
+        .then((res) => {
+          setProducts(res.data);
+          setTitle("List Of All Products in stock are the following");
       })
     } catch (error) {
       console.error(error);
@@ -43,7 +43,8 @@ const ProductList = () => {
   //handle availbale products
   const handlAvailableProduct = () => {
     try {
-      axios.get("http://localhost:4000/availableProducts").then((res) => {
+      axios.get("http://localhost:4000/availableProducts")
+        .then((res) => {
         console.log(res);
         setProducts(res.data);
         setTitle("List Of Available Products in stock are the following");
@@ -57,7 +58,8 @@ const ProductList = () => {
   //handle un availabile products
   const getUnAvailableProducts = () => {
     try {
-        axios.get("http://localhost:4000/unavailableProducts").then((res) => {
+      axios.get("http://localhost:4000/unavailableProducts")
+        .then((res) => {
           console.log(res);
           setProducts(res.data);
           setTitle("List Of Un Available Products in stock are the following");
@@ -93,7 +95,8 @@ const ProductList = () => {
   //handle delete product
   const handleDeleteProduct = async (productId) => {
     try {
-      await axios.delete("http://localhost:4000/delete/" + productId)
+      await axios.delete(
+          "http://localhost:4000/delete/" + productId)
         .thene((res) => {
           console.log(res);
           window.location.reload(); // Refresh the page
