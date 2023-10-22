@@ -47,7 +47,7 @@ const UpdateProduct = () => {
           </div>
           <div className="mb-2">
             <label class="form-label" for="form4Example3">
-              Description :{" "}
+              Description  
             </label>
             <textarea
               class="form-control"
@@ -60,7 +60,7 @@ const UpdateProduct = () => {
           </div>
           <div className="mb-2">
             <label class="form-label" for="form4Example3">
-              Enter Price :
+              Price :
             </label>
             <input
               type="Number"
@@ -76,7 +76,7 @@ const UpdateProduct = () => {
               class="form-label"
               for="form4Example3"
             >
-              Enter quantity :
+              Quantity :
             </label>
             <input
               type="Number"

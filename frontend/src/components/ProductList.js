@@ -102,7 +102,6 @@ const ProductList = () => {
       console.error(error);
     }
   };
-
   return (
     <>
       <NavBar

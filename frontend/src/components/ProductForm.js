@@ -72,7 +72,7 @@ const ProductForm = () => {
           </div>
           <div className="mb-2">
             <label class="form-label" for="form4Example3">
-              Enter Price :
+              Price :
             </label>
             <input
               type="Number"
@@ -88,7 +88,7 @@ const ProductForm = () => {
           </div>
           <div className="mb-2">
             <label class="form-label" for="form4Example3">
-              Enter quantity :
+              Quantity :
             </label>
             <input
               type="Number"
